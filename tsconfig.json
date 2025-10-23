@@ -1,24 +1,8 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "jsx": "react",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noUnusedLocals": true,
-    "outDir": "./dist/",
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "target": "esnext",
+    "baseUrl": ".",
+    "esModuleInterop": true
   },
-  "include": [
-    "./src/**/*.ts*",
-  ],
-  "exclude": [
-    "./src/**/*.test.ts*",
-  ]
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.json"],
+  "exclude": ["node_modules", "dist"]
 }

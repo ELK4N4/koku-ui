@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 const { dependencies, insights } = require('./package.json');
+const nodeModulesDir = path.resolve(__dirname, '../../node_modules');
 
 const moduleName = insights.appname.replace(/-(\w)/g, (_, match) => match.toUpperCase());
 const srcDir = path.resolve(__dirname, './src');
@@ -35,6 +36,7 @@ module.exports = {
   appUrl: '/openshift/cost-management',
   debug: true,
   interceptChromeConfig: false, // Change to false after your app is registered in configuration files
+  nodeModulesDirectories: [nodeModulesDir],
   proxyVerbose: true,
   sassPrefix: `.${moduleName}`,
   // sassPrefix: 'body', // For PF v5 testing only
@@ -86,7 +88,7 @@ module.exports = {
     }),
   ],
   resolve: {
-    modules: [srcDir, path.resolve(__dirname, './node_modules')],
+    modules: [srcDir, path.resolve(__dirname, 'node_modules'), 'node_modules', nodeModulesDir],
   },
   routes: {
     /**
