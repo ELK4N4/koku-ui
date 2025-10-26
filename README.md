@@ -27,7 +27,7 @@ npm install
 | `npm run build:saas` | Build the SaaS app |
 | `npm run build:standalone` | Placeholder build script for the standalone app |
 | `npm run lint` | Run linting for the SaaS app |
-| `npm run test` | Run tests for the SaaS app |
+| `TZ=UTC npm run test` | Run tests for the SaaS app |
 | `npm run translations` | Execute translation workflows for the SaaS app |
 | `npm run verify` | Full verification (build + lint + test) for the SaaS app |
 
