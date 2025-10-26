@@ -1,6 +1,6 @@
 # Koku UI Monorepo
 
-This repository now hosts multiple front-end applications for Cost Management:
+This repository hosts multiple front-end applications for Cost Management:
 
 - `apps/saas` – the existing SaaS-hosted Cost Management UI
 - `apps/standalone` – a placeholder for the upcoming standalone/on-prem experience
